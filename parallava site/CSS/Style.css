@@ -1,0 +1,691 @@
+@font-face {
+        font-family: "Arthead";  src: url(/fonts/Arthead.otf) format("truetype");}
+@font-face {
+        font-family: "Austria";  src: url(/fonts/Austria.ttf) format("truetype");}
+@font-face {
+        font-family: "Gobold"; src: url(/fonts/GoboldHollow.otf) format("truetype");}
+html{
+     scroll-behavior: smooth;
+     overflow-x: hidden;
+}
+body{
+    height: 800vh;
+    background-color: #101010;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+.menu-icon{
+    display: none;
+   }             
+      .MENU1{
+        display: none;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*                 WHITE SCROLL BAR           */
+::-webkit-scrollbar {
+    width: 5px;}  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+       border-radius: 1000px;
+       background-clip: content-box;
+       background-color: #ffffff;}
+        /*                BOTTOM RIGHT LIGHTNING           */
+.background{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 50vw;
+        opacity: 0.3;
+        z-index: -1;
+        }
+         /*               NAVIGATION BAR           */
+.Navbar{
+    border-radius: 0px 0px 20px 20px;
+    top: 0PX;
+    z-index: 3;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.458);
+    height: 60px;
+    width: 100%;
+    backdrop-filter: blur(25px);}
+.Navbar ul{
+    justify-content: right;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.Navbar ul li a{
+    z-index: 1;
+    transition: 0.4s;
+    font-family: 'Oswald', sans-serif;
+    padding: 40px;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+   
+}
+.Navbar ul li a:hover{
+text-shadow: 0px 0px 20px #ffffffac;
+}
+
+.Navbar ul li .selected::before{
+    border: solid 1px #ffffffa9;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    border-radius: 50px;
+    margin-left: -30px;
+    margin-top: -6px;
+    width: 100px;
+    height: 35px;
+}
+.Navbar ul img{
+    opacity: 0.8;
+    position: fixed;
+    left: 50px;
+    width: 35px;
+    top: 15px;}
+     /*                 SECTION 1 (HOME)           */
+.Section1{
+    border-bottom: solid 1px #dfdede70;
+    padding-bottom: 7vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;}
+
+.Section1 h1{    font-family: Arthead;
+   line-height: 8vh;
+   font-weight: 200;
+   font-size: 9Vh;
+   margin-top: 22vh;
+   margin-left: 7vw;
+   color: #dfdede;}
+.Section1 h1 span{ 
+    font-family: Austria;   
+    opacity: 0.6;
+    font-size: 5Vh;
+    font-weight: 100;
+    color: #dfdede;}
+    .Section1 h2{
+        opacity: 0.1;
+        position: absolute;
+        z-index: -1;
+        font-family: Gobold;
+        color: #dfdede;
+        top: 40vh;
+        font-weight: 100;
+        font-size: 30vh;}
+        .Section1 .avocado{
+        animation: fly 5s infinite alternate ease-in-out;
+        bottom: 5vh;
+        left: 0px;
+        position: absolute;
+        z-index: -1;
+        opacity: 0.9;
+        width: 20vw;}
+        /*                 SECTION 1 (LISTED ITEMS)           */
+        .Section1 ul{
+        mix-blend-mode: lighten;
+        margin: 0;
+        line-height: 13vh;
+        font-weight: 100;
+        margin-right: 10vw;
+        float: right;
+        color: #dfdede;
+        text-decoration: none;
+        list-style: none;
+        font-size: 2.8vh;
+        font-family: 'Oswald', sans-serif;
+        }
+    .Section1 ul li i{  font-size: 3.2vh;
+        margin-right: 1.5vw;
+        border-radius: 2.1vh;
+        padding:  2.5vh;
+        width: 3vh;
+        height:  3vh;
+        text-align: center;
+        color: #000000;
+        background-color: #dfdede;}
+
+
+
+     /*                 SECTION 2 (PRODUCTS)           */
+.Section2 {
+    border-bottom: solid 1px #dfdede70;
+    padding-bottom: 10vh;
+}
+
+.Section2 h2{
+    padding-bottom: 10vh;margin-top: 10vh;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1vh;
+    font-weight: 200;
+    font-size: 10Vh;
+    margin-left: 7vw;
+    color: #dfdede;}
+     /*                 SECTION 2 (PRODUCT 1-AVOCADO ORGANICS)           */
+.product-avocado-organics{
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-radius: 40px;
+    width: 100%;    height: 50vw;
+    
+    z-index: 2;}
+.Section2 .product-avocado-organics .avocado-organics-left{
+    background-color: #dfdede14;
+    overflow: hidden;
+    width: 50%;
+    background-image: url(/IMG/avocado\ orgaincs.png);
+    background-repeat: no-repeat;
+    background-size:50vw;
+    background-position-y: 2VW;}
+.Section2 .product-avocado-organics .avocado-organics-right{
+    
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;}
+.Section2 .product-avocado-organics .avocado-organics-right .avocado-organics-1{
+width: 50%;
+
+background-image: url(/IMG/avocado\ orgaincs-1.png);
+background-size: 100%;
+background-repeat: no-repeat;
+height: 50%;}
+.Section2 .product-avocado-organics .avocado-organics-right .avocado-organics-2{
+    width: 50%;
+    background-image: url(/IMG/avocado\ orgaincs-2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 50%;}
+    .Section2 .product-avocado-organics .avocado-organics-right .avocado-organics-3{
+        width: 50%;
+        background-image: url(/IMG/avocado\ orgaincs-3.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 50%;}
+        .Section2 .product-avocado-organics .avocado-organics-right .avocado-organics-4{
+            width: 50%;
+            background-image: url(/IMG/avocado\ orgaincs-4.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 50%;}
+            .Section2 .product-avocado-organics .avocado-organics-right div{
+                border-radius: 30px;
+                box-shadow: none;
+               
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: 0.5s;}
+            .Section2 .product-avocado-organics .avocado-organics-right button{
+       position: absolute;
+       margin-top: 20%;
+       font-family: 'Oswald', sans-serif;
+       line-height: 0vh;
+       font-weight: 200;
+       font-size: 1.5Vh;
+       color: #ffffff;
+       transition: 0.5s;
+       box-shadow: none;
+       border: none;
+       width: 10vw;
+       height: 3vw;
+       border-radius: 400px;
+       background-color: #00000039;
+       backdrop-filter: blur(20px);
+       border: solid 1px #dfdede;}
+.Section2 .product-avocado-organics .avocado-organics-right div:hover{
+    background-color: #0000004f;}
+            .Section2 .product-avocado-organics .avocado-organics-right button:hover{
+    background-color: #dfdede;
+    box-shadow: 0px 0px 20px 1px #ffffff67;
+    color: #101010;}
+
+     /*                 SECTION 3 (NEWS FEED)           */
+.Section3 h2{
+    padding-bottom: 5vh;
+    margin-top: 10vh;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1vh;
+    font-weight: 200;
+    font-size: 10Vh;
+    margin-left: 7vw;
+    color: #dfdede;}
+
+.Section3 .news1{
+    transition: 1s;
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-radius: 40px;
+    width: 100%;
+    height: 50vw;
+    background-color: #dfdede14;
+    z-index: 2;
+}
+.Section3 .news1-l{
+    border-radius: 50px;
+    overflow: hidden;
+    width: 60%;
+}
+.News-background{
+    width: 100%;
+}
+.Section3 .news1-r{
+    transition: 1s;
+    padding: 2VW;
+    padding-left: 5vw;
+    width: 50%;
+    height: 100%;
+    justify-content: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Section3 .news1-r h1{
+    margin-top: 1vw;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    font-size: 2.8Vw;
+    color: #dfdede;
+}
+.Section3 .news1-r h3{
+     margin-top: -6vw;
+     font-family: 'Oswald', sans-serif;
+     font-weight: 100;
+     font-size: 1Vw;
+     color: #dfdede8d;  
+}
+.Section3 .news1-r h3 span{
+    color: #dfdede;;  
+    font-size: 1.1Vw;
+}
+
+
+
+
+
+     /*                 SECTION 4 (ABOUT)           */
+.Section4{      
+    padding-bottom: 7vh;
+    width: 100%;
+}
+.Section4 .about-wrapper{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height:80vh;
+    width: 100vw;
+}
+.Section4 .about-wrapper::before{border-radius: 30px;
+    content: "";
+    position: absolute;
+    height:80vh;
+    width: 100vw;
+    z-index: -1;
+    background-image: url(/IMG/lines.png);
+background-repeat: repeat;
+background-size: cover;
+opacity: 0.4;
+}
+    .Section4 .about-wrapper div{  
+        background-size:20vw;
+        background-position-x: -9vh ;
+        background-position-y: 35vh ;
+        background-repeat: no-repeat;
+        border-top: 1px solid #ffffff92;
+        border-left: 1px solid #ffffff92;
+        box-shadow: 20px 20px 50px #00000050;
+   backdrop-filter: blur(20px);
+    background-color: #d0d0d019;
+        margin: 1vw;
+        padding-top: 7vh;         
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        width: 100%;
+        height: 60vh;
+       border-radius: 40px;
+    }
+    .Section4 .about-wrapper div:hover{
+        box-shadow: 0px 0px 40px 6px #ffffff5e;
+    }
+.Section4 h1{
+    padding-bottom: 10vh;margin-top: 13vh;
+font-family: 'Oswald', sans-serif;
+line-height: 1vh;
+font-weight: 200;
+font-size: 10Vh;
+margin-left: 7vw;
+color: #dfdede;
+}
+.Section4 h2{    
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    font-size: 5Vh;
+    width: 25vw;
+    color: #dfdede;
+   }
+ .Section4 p{ 
+    opacity: 0.6;
+    line-height: 4vh;
+    font-family: 'Oswald', sans-serif;
+     font-weight: 100;
+     font-size: 2Vh;
+     width: 25vw;
+     color: #dfdede;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @keyframes fly{
+        from{
+transform: translateY(0px);
+        }
+        to{
+            transform: translateY(100px);
+        }
+    }
+
+
+      /* 
+           /mobile                           view                                  port/
+           /mobile                           view                                  port/
+           /mobile                           view                                  port/
+        */  
+
+        @media screen and (max-width: 780px) { 
+
+
+
+
+
+
+
+            .menu-icon{
+                z-index: 5;
+                opacity: 90%;
+                width: 31px;         
+              position: sticky;
+              display:initial;
+               left: calc(100% - 55px);
+                height: 31px;
+                top: 12px;
+           }             
+              .close-icon{display:initial;
+                z-index: 5;
+                opacity: 90%;
+                width: 31px;        
+                position: absolute;
+                height: 31px;
+                left: calc(100% - 50px);
+                top: 12px;
+             }        
+            
+                .MENU1 ul li{
+                  
+                  display: flex;
+                   
+                    z-index: 1;
+                      list-style: none;
+                    flex-wrap: nowrap;
+                    flex-direction: column;
+                    padding-top: 14vh;
+              text-align: center;
+              padding-right: 10%;
+          }             
+                  .MENU1 ul li a{
+                    
+                    display: block;
+                    font-family: 'Alumni Sans', sans-serif;
+font-weight: 600;
+                      list-style: none;
+              text-decoration: none;
+              font-size: 23PX;
+              color: #FFF; }
+                
+                  
+                  .MENU1{display: block;
+                  
+                  overflow-y: auto;
+                   transition: 1s;
+                      position: fixed;
+                      
+                      width: 100%;
+                      height: 100%;
+                      background: radial-gradient(#ffffff23 ,#000000a1 );
+      
+                      backdrop-filter: blur(22px);
+                      z-index: 6;
+                      top: -100%;}
+
+
+
+
+
+
+
+
+
+
+
+.Section4{
+    display: none;
+}
+
+            .background{
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                width: 100vw;
+                opacity: 0.3;
+                z-index: -1;}
+            .Navbar ul li{
+                display: none;}
+            .Navbar ul img{
+                opacity: 0.8;
+                position: fixed;
+                left: 20px;
+                width: 30px;
+                top: 15px;}
+                .Section1{
+                    padding-bottom: 14vh;}
+.Section1 h1{
+    line-height: 6vh;
+    font-size: 6Vh;}
+.Section1 h1 span{  
+    font-size: 4Vh;}
+    .Section1 h2{
+        top: 0vh;
+        overflow: hidden;
+        width: 100vw;
+        font-size: 15vh;}
+    .Section1 .avocado{
+        display: none;}
+    .Section1 ul{
+        line-height: 10vh;
+     float: left;
+        color: #dfdede;
+        font-size: 1.5vh;
+        font-family: 'Oswald', sans-serif;}
+    .Section1 ul li i{  
+        font-size: 2.5vh;
+        border-radius: 1.8vh;
+        padding:  2vh;
+        width: 2.5vh;
+        height:  2.5vh;}
+.Section2 h2{
+    padding-bottom: 5vh;
+    margin-top: 8vh;
+    font-size: 7Vh;}
+.product-avocado-organics{
+align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+border-radius: 20px;
+width: 100%;
+height:fit-content;
+background-color: #dfdede14;
+z-index: 2;}
+.Section2 .product-avocado-organics .avocado-organics-left{
+    overflow: hidden;
+    height:100vw;
+    width: 100%;
+    background-image: url(/IMG/avocado\ orgaincs.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position-y: 2VW;}
+.Section2 .product-avocado-organics .avocado-organics-right{
+    border: none;
+    border-radius: 30PX;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;}
+.Section2 .product-avocado-organics .avocado-organics-right .avocado-organics-1{
+width: 100%;
+border: none;
+height:90vw;
+background-image: url(/IMG/avocado\ orgaincs-1.png);
+background-size: cover;
+background-repeat: no-repeat;}
+.Section2 .product-avocado-organics .avocado-organics-right .avocado-organics-2{
+    width: 100%;
+    background-image: url(/IMG/avocado\ orgaincs-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:90vw;}
+    .Section2 .product-avocado-organics .avocado-organics-right .avocado-organics-3{
+        width: 100%;
+        background-image: url(/IMG/avocado\ orgaincs-3.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height:90vw;}
+        .Section2 .product-avocado-organics .avocado-organics-right .avocado-organics-4{
+            width: 100%;
+            background-image: url(/IMG/avocado\ orgaincs-4.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height:90vw;}
+            .Section2 .product-avocado-organics .avocado-organics-right div{
+               
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: 0.5s;}   
+            .Section2 .product-avocado-organics .avocado-organics-right button{
+        position: absolute;
+        margin-top: 75vw;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 200;
+        font-size: 3.5Vw;
+        color: #ffffff;
+        transition: 0.5s;
+        box-shadow: none;
+        border: none;
+        width: 35vw;
+        height: 10vw;
+        border-radius: 400px;
+        background-color: #00000039;
+        backdrop-filter: blur(20px);
+        border: solid 1px #dfdede;}
+.Section2 .product-avocado-organics .avocado-organics-right div:hover{
+       background-color: #0000004f;}
+    .Section2 .product-avocado-organics .avocado-organics-right button:hover{
+       background-color: #dfdede;
+       box-shadow: 0px 0px 20px 1px #ffffff67;
+       color: #101010;}
+        
+.Section3 h2{
+     padding-bottom: 5vh;
+     margin-top: 8vh;
+     font-size: 7Vh;}
+
+.Section3 .news1{
+    flex-direction: column;
+    border-radius: 20px;
+    width: 100vw;
+    height: fit-content;
+    background-color: #dfdede14;
+    z-index: 2;
+}
+.Section3 .news1-l{
+    border-radius: 20px;
+    width: 100%;
+    height: 50vh;
+}
+.Section3 .news1-r{
+    padding: 2VW;
+    padding-left: 5vw;
+    width: 100vw;
+    height: fit-content;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.Section3 .news1-r h1{
+    width: 90%;
+    margin-top: 10vw;
+    font-size: 7.8Vw;
+}
+.Section3 .news1-r h3{padding-bottom: 8vw;
+    width: 90%;
+    margin-top: -2vw;
+    font-size: 3.3Vw;
+}
+.Section3 .news1-r h3 span{  
+    font-size: 3.5Vw;
+}}
